@@ -73,7 +73,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- ✅ Custom JARs -->
         <dependency>
             <groupId>com.angelbroking.smartapi</groupId>
             <artifactId>an-trading</artifactId>
@@ -90,17 +89,19 @@
             <systemPath>${project.basedir}/libs/smartapi-java-2.2.5.jar</systemPath>
         </dependency>
 
-        <!-- OkHttp & JSON -->
+        <!-- HTTP and JSON -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.12.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>logging-interceptor</artifactId>
             <version>4.12.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -168,7 +169,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Compiler Plugin -->
+            <!-- Java Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -179,7 +180,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Test Plugin -->
+            <!-- Testing Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
