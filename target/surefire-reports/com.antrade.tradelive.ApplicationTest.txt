@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.antrade.tradelive.ApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.130 s <<< FAILURE! -- in com.antrade.tradelive.ApplicationTest
+com.antrade.tradelive.ApplicationTest.shouldRespondWithHelloMessage -- Time elapsed: 0.346 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: "Hello World!"
+ but was: null
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at com.antrade.tradelive.ApplicationTest.shouldRespondWithHelloMessage(ApplicationTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

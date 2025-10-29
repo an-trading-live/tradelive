@@ -1,6 +1,5 @@
 package com.antrade.tradelive;
 
-import com.antrade.tradelive.dto.HelloDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,13 +22,6 @@ class ApplicationTest {
 
     @Test
     void contextLoads() {
-    }
-
-    @Test
-    void shouldRespondWithHelloMessage() {
-        HelloDTO helloDTO = restTemplate.getForObject(getHelloEndpointUrl(), HelloDTO.class);
-
-        assertThat(helloDTO.getMessage()).isEqualTo("Hello World!");
     }
 
     private String getHelloEndpointUrl() {

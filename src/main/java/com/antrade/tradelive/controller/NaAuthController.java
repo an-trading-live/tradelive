@@ -1,6 +1,5 @@
 package com.antrade.tradelive.controller;
 
-import com.antrade.tradelive.dto.HelloDTO;
 import com.antrade.tradelive.entity.na_auth;
 import com.antrade.tradelive.service.NaAuthService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,7 +2,6 @@ package com.antrade.tradelive.controller;
 
 import com.angelbroking.smartapi.BuyandSellSmartApi;
 import com.angelbroking.smartapi.MainIncluded;
-import com.antrade.tradelive.dto.HelloDTO;
 import com.antrade.tradelive.entity.na_trade;
 import com.antrade.tradelive.service.NaTradeService;
 
@@ -35,11 +34,6 @@ public class NaTradeController {
         return ResponseEntity.ok(trades);
     }
     // testing 
-    @GetMapping(path = "/hello")
-    public HelloDTO hello() {
-        return new HelloDTO("Hello Worldffffrr!");
-    }
-
     // GET trade by ID
     @GetMapping("/{id}")
     public ResponseEntity<na_trade> getTradeById(@PathVariable Long id) {

@@ -1,0 +1,5 @@
+#surefire_0
+#Wed Oct 29 19:15:36 IST 2025
+basedir=/Users/ktnaveen/github/tradelive-1
+localRepository=/Users/ktnaveen/.m2/repository
+test=ApplicationTest
