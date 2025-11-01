@@ -76,9 +76,9 @@
         <dependency>
             <groupId>com.angelbroking.smartapi</groupId>
             <artifactId>an-trading</artifactId>
-            <version>1.3.3</version>
+            <version>1.3.6</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/an-trading-1.3.3.jar</systemPath>
+            <systemPath>${project.basedir}/libs/an-trading-1.3.6.jar</systemPath>
         </dependency>
 
         <dependency>

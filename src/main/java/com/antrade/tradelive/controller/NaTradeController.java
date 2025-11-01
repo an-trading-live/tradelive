@@ -116,8 +116,8 @@ public class NaTradeController {
                 return ResponseEntity.badRequest().body("API Key is required");
             }
             
-            Integer dayExpiry = ((Number) requestBody.get("dayExpiry")).intValue();
-            if (dayExpiry == null || dayExpiry <= 0) {
+            String dayExpiry = ((String) requestBody.get("dayExpiry"));
+            if (dayExpiry == null || dayExpiry.trim().isEmpty()) {
                 return ResponseEntity.badRequest().body("Day Expiry must be a positive number");
             }
             
@@ -143,13 +143,18 @@ public class NaTradeController {
             if (test_env == null || test_env.trim().isEmpty()) {
                 return ResponseEntity.badRequest().body("test need to provide true");
             }
-            String custom_date = (String) requestBody.get("app_lock_key");
+            String custom_date = (String) requestBody.get("custom_date");
             if (custom_date == null || custom_date.trim().isEmpty()) {
                 return ResponseEntity.badRequest().body("custom_date Key is 2025-10-23T10:15:00+05:30");
             }
             Integer no_candle = ((Number) requestBody.get("test_size")).intValue();
             if (no_candle == null || no_candle <= 0) {
                 return ResponseEntity.badRequest().body("test_size must be a positive number");
+            }
+            
+            String indices = (String) requestBody.get("indices");
+            if (custom_date == null || custom_date.trim().isEmpty()) {
+                return ResponseEntity.badRequest().body("empty indices Key indices");
             }
             BuyandSellSmartApi buyandSellSmartApi = new BuyandSellSmartApi();
 			//            BuyandSellSmartApi buy_sell = new BuyandSellSmartApi();
@@ -167,8 +172,9 @@ public class NaTradeController {
             	test = true;
             }
             try {
+            	int exp_date = Integer.parseInt(dayExpiry);
 //            	boolean test,String custom_date,int no_candle
-            	MainIncluded.StartTrading(apiKey, client_id, app_lock_key, totp_secret, dayExpiry, capitalAmount,test,custom_date,no_candle);      	
+            	MainIncluded.StartTrading(apiKey, client_id, app_lock_key, totp_secret, exp_date, capitalAmount,test,custom_date,no_candle,indices);      	
 //            	MainIncluded.StartTrading();
             }catch( Exception e) {
             	return ResponseEntity.ok(e+"");
