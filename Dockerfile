@@ -18,10 +18,10 @@ RUN mvn install:install-file -Dfile=/app/libs/smartapi-java-2.2.5.jar \
     -Dversion=2.2.5 \
     -Dpackaging=jar || echo "smartapi-java.jar not found, skipping"
 
-RUN mvn install:install-file -Dfile=/app/libs/an-trading-1.3.3.jar \
+RUN mvn install:install-file -Dfile=/app/libs/an-trading-1.3.6.jar \
     -DgroupId=com.angelbroking.smartapi \
     -DartifactId=an-trading \
-    -Dversion=1.3.3 \
+    -Dversion=1.3.6 \
     -Dpackaging=jar || echo "an-trading.jar not found, skipping"
 
 # Now copy the rest of the project files
